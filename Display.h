@@ -25,15 +25,15 @@
 // Verwendungszweck:	uP-Schulung
 //
 // Beschreibung:
-// Beinhaltet Treiber fÃ¼r die Ansteuerung eines LCD Displays.
+// Beinhaltet Treiber für die Ansteuerung eines LCD Displays.
 //
 //
 // Entwicklungsablauf:
 // Ver: Datum:	Autor:  Entwicklungsschritt:                        Zeit:
 // 1.0  14.12.14  JGr   LCD_Drvier uebersetzt von Assembler zu C	300 Min.
 // 1.0  21.12.14  JGr   Weiter Fehlerbehebung						80	Min.
-// 1.0  21.12.14  JGr   lcd_number hinzugefÃ¼gt						50  Min.
-// 1.0  19.01.15  JLe	sendString() hinzugefÃ¼gt					10	Min.
+// 1.0  21.12.14  JGr   lcd_number hinzugefügt						50  Min.
+// 1.0  19.01.15  JLe	sendString() hinzugefügt					10	Min.
 //
 //										Totalzeit: * Min.
 //
@@ -91,7 +91,7 @@ void lcd_init() {
 void lcd_out(byte data){
 	data &= 0xF0;                   // obere 4 Bit maskieren
 
-	LCD &= ~(0xF0>>(4-LCD_DATA)); // Maske lÃ¶schen
+	LCD &= ~(0xF0>>(4-LCD_DATA)); // Maske löschen
 	LCD |= (data>>(4-LCD_DATA)); // Bits setzen
 	lcd_enable();
 	return;
